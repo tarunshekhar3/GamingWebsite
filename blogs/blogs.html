@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>blogs</title>
-  </head>
 
+<head>
+  <meta charset="utf-8" />
+  <title>blogs</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/button.css" />
   <style>
     body {
       margin: 0;
@@ -13,37 +14,7 @@
       color: white;
     }
 
-    /* HEADER */
-    .header {
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      background: #2a2a2a;
-      gap: 20px;
-    }
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-    }
-    .search {
-      flex: 1;
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-    }
-    .btns .btn {
-      padding: 10px 20px;
-      background: #444;
-      color: #fff;
-      border: none;
-      margin-left: 10px;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-    .btn.yellow {
-      background: #f7b500;
-    }
-
+    /* Keep blog specific styles but remove header/footer overrides if they conflict significantly */
     /* HERO SECTION */
     .hero {
       height: 300px;
@@ -52,16 +23,19 @@
       justify-content: center;
       align-items: center;
     }
+
     .hero-text {
       text-align: center;
       background: rgba(0, 0, 0, 0.6);
       padding: 20px 40px;
       border-radius: 10px;
     }
+
     .hero-text h1 {
       font-size: 50px;
       margin: 0;
     }
+
     .hero-text p {
       font-size: 18px;
       margin-top: 10px;
@@ -71,6 +45,7 @@
     .blog-section {
       padding: 60px 70px;
     }
+
     .blog-section h2 {
       font-size: 32px;
     }
@@ -89,6 +64,7 @@
       padding: 15px;
       transition: 0.3s;
     }
+
     .blog-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 0 18px #f7b500;
@@ -111,6 +87,7 @@
       margin: 15px 0 10px;
       font-size: 18px;
     }
+
     .blog-card p {
       color: #ccc;
       font-size: 14px;
@@ -128,98 +105,165 @@
       margin-top: 10px;
     }
   </style>
+</head>
 
-  <body>
-    <!-- HEADER -->
-    <header class="header">
-      <div class="logo">GV</div>
-      <input type="text" placeholder="Search Games..." class="search" />
-      <div class="btns">
-        <button class="btn">SIGN IN</button>
-        <button class="btn yellow">SIGN UP</button>
+<body>
+  <!-- HEADER -->
+  <header class="topbar" style="position: absolute; background: rgba(0,0,0,0.8);">
+    <div class="cont topbar-inner">
+      <div class="logo-wrap">
+        <a href="../index.html">
+          <img src="../Image/Logo.png" alt="Logo" class="logo" />
+        </a>
       </div>
-    </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Gaming Blog</h1>
-        <p>Latest updates, reviews & insights from the world of gaming.</p>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="../index.html" class="route-link">Home</a></li>
+          <li><a href="../games/index.html" class="route-link">Popular Games</a></li>
+          <li><a href="../index.html#featured-horror">Featured Horror</a></li>
+          <li><a href="../index.html#top-picks">Top Picks</a></li>
+          <li><a href="blogs.html" class="active route-link">Blogs</a></li>
+          <li><a href="../index.html#about">About</a></li>
+        </ul>
+        <li>
+          <a href="../login/login.html" class="login-btn" id="authButton">Login / Signup</a>
+        </li>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app-content" style="padding-top: 100px;">
+    <!-- Single Full Page Background Wrapper -->
+    <div class="page-background mouse-parallax" data-speed="1"
+      style="background: url('../Image/god of war1.jpg') center/cover fixed; width:100%; min-height:100vh;">
+
+      <!-- HERO SECTION -->
+      <section class="hero" style="background: none;">
+        <div class="hero-text reveal">
+          <h1>Gaming Blog</h1>
+          <p>Latest updates, reviews & insights from the world of gaming.</p>
+        </div>
+      </section>
+
+      <!-- BLOG SECTION -->
+      <section class="blog-section" style="background: none;">
+        <h2 class="reveal">Latest Articles</h2>
+
+        <div class="blog-grid">
+          <!-- BLOG CARD 1 -->
+          <div class="blog-card reveal">
+            <div class="blog-img">
+              <img src="../Image/god of war1.jpg" alt="Elden Ring" />
+            </div>
+            <h3>Elden Ring DLC: Shadow of the Erdtree Review</h3>
+            <p>
+              The world of Elden Ring expands with new bosses, weapons, and epic
+              lore.
+            </p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+
+          <!-- BLOG CARD 2 -->
+          <div class="blog-card reveal">
+            <div class="blog-img">
+              <img src="../Image/venom.jpg" alt="Spider-Man 2" />
+            </div>
+            <h3>Spider-Man 2 — Is It Worth the Hype?</h3>
+            <p>
+              A complete breakdown of gameplay mechanics, story, and graphics.
+            </p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+
+          <!-- BLOG CARD 3 -->
+          <div class="blog-card reveal">
+            <div class="blog-img">
+              <img src="../Image/call of duty.jpg" alt="COD MW3" />
+            </div>
+            <h3>Modern Warfare 3 — Ultimate Weapons Guide</h3>
+            <p>
+              Best guns, loadouts, and beginner tips for dominating MP lobbies.
+            </p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+
+          <!-- BLOG CARD 4 -->
+          <div class="blog-card reveal">
+            <div class="blog-img">
+              <img src="../Image/ageofbharat.jpg" alt="Baldur's Gate 3" />
+            </div>
+            <h3>Baldur’s Gate 3 — Complete Character Guide</h3>
+            <p>Best builds, skill trees & abilities for every class.</p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+
+          <!-- BLOG CARD 5 -->
+          <div class="blog-card reveal">
+            <div class="blog-img">
+              <img src="../Image/insane asylum.jpg" alt="Hogwarts Legacy" />
+            </div>
+            <h3>Hogwarts Legacy — Tips & Hidden Secrets</h3>
+            <p>Explore the magical world with this beginner-friendly guide.</p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+
+          <!-- BLOG CARD 6 -->
+          <div class="blog-card reveal">
+            <div class="blog-img">
+              <img src="../Image/needforspeed.jpg" alt="Forza Horizon 5" />
+            </div>
+            <h3>Forza Horizon 5 — Best Cars Ranked</h3>
+            <p>Speed, handling, drift — here are the top 10 cars in FH5.</p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="about">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3 class="brand">PF 6</h3>
+        <p class="credits">All credits owned by respective owners.</p>
+        <p class="newsletter-text">
+          Enter your email to get our weekly newsletter
+        </p>
+
+        <form class="newsletter-box" id="newsletter-form">
+          <input type="email" placeholder="Enter your email here" required />
+          <button type="submit">Join Now</button>
+        </form>
       </div>
-    </section>
 
-    <!-- BLOG SECTION -->
-    <section class="blog-section">
-      <h2>Latest Articles</h2>
-
-      <div class="blog-grid">
-        <!-- BLOG CARD 1 -->
-        <div class="blog-card">
-          <div class="blog-img">
-            <img src="https://i.ibb.co/j62fmTz/elden.jpg" alt="" />
-          </div>
-          <h3>Elden Ring DLC: Shadow of the Erdtree Review</h3>
-          <p>
-            The world of Elden Ring expands with new bosses, weapons, and epic
-            lore.
-          </p>
-          <a href="#" class="btn">Read More</a>
-        </div>
-
-        <!-- BLOG CARD 2 -->
-        <div class="blog-card">
-          <div class="blog-img">
-            <img src="https://i.ibb.co/4V6Kcty/spiderman.jpg" alt="" />
-          </div>
-          <h3>Spider-Man 2 — Is It Worth the Hype?</h3>
-          <p>
-            A complete breakdown of gameplay mechanics, story, and graphics.
-          </p>
-          <a href="#" class="btn">Read More</a>
-        </div>
-
-        <!-- BLOG CARD 3 -->
-        <div class="blog-card">
-          <div class="blog-img">
-            <img src="https://i.ibb.co/ww3FDN7/cod.jpg" alt="" />
-          </div>
-          <h3>Modern Warfare 3 — Ultimate Weapons Guide</h3>
-          <p>
-            Best guns, loadouts, and beginner tips for dominating MP lobbies.
-          </p>
-          <a href="#" class="btn">Read More</a>
-        </div>
-
-        <!-- BLOG CARD 4 -->
-        <div class="blog-card">
-          <div class="blog-img">
-            <img src="https://i.ibb.co/7rXBs3N/bg3.jpg" alt="" />
-          </div>
-          <h3>Baldur’s Gate 3 — Complete Character Guide</h3>
-          <p>Best builds, skill trees & abilities for every class.</p>
-          <a href="#" class="btn">Read More</a>
-        </div>
-
-        <!-- BLOG CARD 5 -->
-        <div class="blog-card">
-          <div class="blog-img">
-            <img src="https://i.ibb.co/RSk6Nnr/hogwarts.jpg" alt="" />
-          </div>
-          <h3>Hogwarts Legacy — Tips & Hidden Secrets</h3>
-          <p>Explore the magical world with this beginner-friendly guide.</p>
-          <a href="#" class="btn">Read More</a>
-        </div>
-
-        <!-- BLOG CARD 6 -->
-        <div class="blog-card">
-          <div class="blog-img">
-            <img src="https://i.ibb.co/bmTpNbH/forza.jpg" alt="" />
-          </div>
-          <h3>Forza Horizon 5 — Best Cars Ranked</h3>
-          <p>Speed, handling, drift — here are the top 10 cars in FH5.</p>
-          <a href="#" class="btn">Read More</a>
-        </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="../index.html">Home</a>
+        <a href="../games/index.html">Games</a>
+        <a href="#">Reviews</a>
+        <a href="blogs.html">Blog</a>
+        <a href="#">Contacts</a>
       </div>
-    </section>
-  </body>
+
+      <div class="footer-col">
+        <h4>Features</h4>
+        <a href="#">All types of Games</a>
+        <a href="#">Help</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Cookies</h4>
+        <a href="#">Points</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Laws</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/router.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
 </html>

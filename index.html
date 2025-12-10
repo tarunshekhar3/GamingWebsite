@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Gaming Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/button.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8" />
+  <title>Gaming Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Google Fonts: Poppins for professional look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/button.css" />
+</head>
+
+<body>
+  <main id="app-content">
     <!-- HOME / HERO -->
-    <header class="banner" id="home">
+    <header class="banner mouse-parallax" id="home" data-speed="1">
       <div class="overlay"></div>
 
       <div class="topbar">
@@ -25,17 +33,15 @@
 
           <nav class="nav">
             <ul class="nav-links">
-              <li><a href="#home" class="active">Home</a></li>
-              <li><a href="games/index.html">Popular Games</a></li>
+              <li><a href="index.html" class="active route-link">Home</a></li>
+              <li><a href="games/index.html" class="route-link">Popular Games</a></li>
               <li><a href="#featured-horror">Featured Horror</a></li>
               <li><a href="#top-picks">Top Picks</a></li>
-              <li><a href="blogs/blogs.html">Blogs</a></li>
-              <li><a href="#about">About</a></li>
+              <li><a href="blogs/blogs.html" class="route-link">Blogs</a></li>
+              <li><a href="#about-us">About</a></li>
             </ul>
             <li>
-              <a href="login/login.html" class="login-btn" id="authButton"
-                >Login / Signup</a
-              >
+              <a href="login/login.html" class="login-btn" id="authButton">Login / Signup</a>
             </li>
           </nav>
         </div>
@@ -43,60 +49,57 @@
 
       <div class="section">
         <div class="cont1">
-          <h1>GOD OF WAR</h1>
-          <p>
-            God of War is a cinematic action-adventure following Kratos and
-            Atreus through the realms of Norse mythology. With emotional
-            storytelling and immersive combat, it remains one of the most iconic
-            modern gaming experiences.
+          <h1 class="reveal">GOD OF WAR</h1>
+          <p class="reveal">
+            Embark on a mythic journey for answers. Join Kratos and Atreus as they venture into the brutal Norse realms,
+            fighting specifically designed enemies and experiencing a narrative that has redefined modern gaming.
           </p>
-          <a href="#popular-games" class="btn">Explore Games</a>
+          <a href="games/index.html" class="btn reveal">Explore Games</a>
         </div>
       </div>
     </header>
 
     <!-- POPULAR GAMES -->
-    <section class="populergames" id="popular-games">
+    <section class="populergames mouse-parallax" id="popular-games" data-speed="1">
       <div class="cont">
         <div class="Games">
-          <h1>POPULAR GAMES</h1>
-          <p>
-            Discover some of the most celebrated titles shaping the gaming
-            landscape in 2025. These games deliver innovative gameplay, rich
-            storytelling, and unforgettable experiences.
+          <h1 class="reveal">POPULAR GAMES</h1>
+          <p class="reveal">
+            Dive into the most played titles of 2025. From tactical shooters to emotional storytelling, experience the
+            games that are setting new industry standards.
           </p>
         </div>
 
         <div class="row cards-row">
-          <div class="card btn">
+          <div class="card btn reveal">
             <div class="box">
               <img src="image/call of duty.jpg" alt="Call of Duty" />
               <h2>Call Of Duty</h2>
               <p>
-                A globally recognized FPS franchise offering intense combat,
-                cinematic missions, and competitive multiplayer action.
+                The definitive first-person shooter experience. Engage in high-octane multiplayer combat and cinematic
+                campaigns.
               </p>
             </div>
           </div>
 
-          <div class="card btn">
+          <div class="card btn reveal">
             <div class="box">
               <img src="image/apex legend.jpg" alt="Apex Legends" />
               <h2>Apex Legends</h2>
               <p>
-                A squad-based battle royale known for smooth movement, unique
-                legends, and fast-paced tactical gameplay.
+                Master an ever-growing roster of legendary characters in this strategic battle royale where teamwork is
+                the difference between victory and defeat.
               </p>
             </div>
           </div>
 
-          <div class="card btn">
+          <div class="card btn reveal">
             <div class="box">
               <img src="image/the last of us.jpg" alt="The Last of Us" />
               <h2>The Last Of Us</h2>
               <p>
-                A gripping story-driven adventure exploring survival, humanity,
-                and emotional character relationships.
+                A profound narrative experience exploring the limits of human survival in a ravaged world. Winner of
+                over 200 Game of the Year awards.
               </p>
             </div>
           </div>
@@ -104,46 +107,46 @@
       </div>
     </section>
 
-    <!-- FEATURED HORROR -->
-    <section class="thedarkwidow" id="featured-horror">
+    <!-- FEATURED HORROR: THE QUARRY -->
+    <section class="thedarkwidow mouse-parallax" id="featured-horror"
+      style="background-image: url('image/the quarry.jpg');" data-speed="1">
       <div class="overlay"></div>
       <div class="cont darkwidow-inner">
-        <div class="col50 image-col">
-          <img src="image/horror.jpg" alt="The Dark Widow" />
+        <div class="col50 image-col reveal">
+          <img src="image/the quarry.jpg" alt="The Quarry" />
         </div>
 
-        <div class="col50 text-col">
-          <h1>The Dark Widow</h1>
+        <div class="col50 text-col reveal">
+          <h1>The Quarry</h1>
           <p>
-            The Dark Widow is a psychological horror experience blending eerie
-            environments with a mysterious narrative. Players uncover haunting
-            secrets hidden within abandoned structures and confront the terrors
-            that lurk in the shadows.
+            A cinematic horror tale where your choices shape the fate of nine counselors stranded at Hackett's Quarry.
+            Will you save your friends or will they die? In this narrative-driven nightmare, every decision can be a
+            matter of life or death.
           </p>
         </div>
       </div>
     </section>
 
     <!-- METRO EXODUS -->
-    <section class="metroexadous" id="metro-exodus">
+    <section class="metroexadous mouse-parallax" id="metro-exodus" data-speed="1">
       <div class="overlay"></div>
       <div class="cont metro-inner">
-        <div class="col50 image-col">
+        <div class="col50 image-col reveal">
           <img src="image/metro exadous.jpg" alt="Metro Exodus" />
         </div>
-        <div class="col50 text-col">
+        <div class="col50 text-col reveal">
           <h1>Metro Exodus</h1>
           <p>
-            Metro Exodus is a first-person shooter developed by 4A Games and
-            published by Deep Silver in 2019. It is the third entry in the Metro
-            series, based on Dmitry Glukhovsky's novels.
+            Flee the shattered ruins of dead Moscow and embark on an epic, continent-spanning journey across
+            post-apocalyptic Russia. Combine deadly combat and stealth with exploration and survival horror in one of
+            the most immersive game worlds ever created.
           </p>
         </div>
       </div>
     </section>
 
     <!-- TOP PICKS -->
-    <section class="wrapper" id="top-picks">
+    <section class="wrapper mouse-parallax" id="top-picks" data-speed="1">
       <div class="cont cards-slider" style="height: 400px">
         <input type="radio" name="slide" id="card1" checked />
         <label for="card1" class="card">
@@ -151,6 +154,7 @@
             <div class="icon">1</div>
             <div class="description">
               <h1>The Age Of Bharat</h1>
+              <p>Indian Epic RPG</p>
             </div>
           </div>
         </label>
@@ -161,6 +165,7 @@
             <div class="icon">2</div>
             <div class="description">
               <h1>Call Of Duty</h1>
+              <p>Action FPS</p>
             </div>
           </div>
         </label>
@@ -171,6 +176,7 @@
             <div class="icon">3</div>
             <div class="description">
               <h1>Valorant</h1>
+              <p>Tactical Shooter</p>
             </div>
           </div>
         </label>
@@ -181,6 +187,7 @@
             <div class="icon">4</div>
             <div class="description">
               <h1>Need For Speed</h1>
+              <p>High Octane Racing</p>
             </div>
           </div>
         </label>
@@ -191,64 +198,90 @@
             <div class="icon">5</div>
             <div class="description">
               <h1>Metro Exodus</h1>
+              <p>Survival Shooter</p>
             </div>
           </div>
         </label>
 
+        <!-- God of War instead of Poseidon -->
         <input type="radio" name="slide" id="card6" />
         <label for="card6" class="card">
           <div class="row">
             <div class="icon">6</div>
             <div class="description">
-              <h1>Poseidon</h1>
+              <h1>God of War</h1>
+              <p>Action Adventure</p>
             </div>
           </div>
         </label>
       </div>
     </section>
+    </section>
 
-    <!-- FOOTER -->
-    <footer class="footer" id="about">
-      <div class="footer-container">
-        <div class="footer-left">
-          <h3 class="brand">PF 6</h3>
-          <p class="credits">All credits owned by respective owners.</p>
-          <p class="newsletter-text">
-            Enter your email to get our weekly newsletter
+    <!-- ABOUT US SECTION -->
+    <section class="about-us mouse-parallax" id="about-us" data-speed="1">
+      <div class="overlay"></div>
+      <div class="cont about-inner reveal">
+        <div class="about-text">
+          <h1>About Gaming World</h1>
+          <p>
+            We are passionate gamers dedicated to bringing you the latest reviews,
+            news, and insights from the gaming universe. Our mission is to
+            connect players with the stories and experiences that matter most.
           </p>
-
-          <form class="newsletter-box" id="newsletter-form">
-            <input type="email" placeholder="Enter your email here" required />
-            <button type="submit">Join Now</button>
-          </form>
+          <a href="#" class="btn">Read Our Story</a>
         </div>
-
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <a href="#home">Home</a>
-          <a href="games/games.html">Games</a>
-          <a href="reviews/reviews.html">Reviews</a>
-          <a href="blogs/blogs.html">Blog</a>
-          <a href="#contact">Contacts</a>
-        </div>
-
-        <div class="footer-col">
-          <h4>Features</h4>
-          <a href="#">All types of Games</a>
-          <a href="#">Help</a>
-        </div>
-
-        <div class="footer-col">
-          <h4>Cookies</h4>
-          <a href="#">Points</a>
-          <a href="#">Terms</a>
-          <a href="#">Privacy</a>
-          <a href="#">Laws</a>
+        <div class="about-image">
+          <img src="image/Logo.png" alt="About Us" />
         </div>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <!-- JS -->
-    <script src="js/main.js"></script>
-  </body>
+  <!-- FOOTER -->
+  <footer class="footer" id="about">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3 class="brand">PF 6</h3>
+        <p class="credits">All credits owned by respective owners.</p>
+        <p class="newsletter-text">
+          Enter your email to get our weekly newsletter
+        </p>
+
+        <form class="newsletter-box" id="newsletter-form">
+          <input type="email" placeholder="Enter your email here" required />
+          <button type="submit">Join Now</button>
+        </form>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="#home">Home</a>
+        <a href="games/games.html">Games</a>
+        <a href="reviews/reviews.html">Reviews</a>
+        <a href="blogs/blogs.html">Blog</a>
+        <a href="#contact">Contacts</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Features</h4>
+        <a href="#">All types of Games</a>
+        <a href="#">Help</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Cookies</h4>
+        <a href="#">Points</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Laws</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/router.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
