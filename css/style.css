@@ -1,0 +1,538 @@
+@charset "utf-8";
+
+/* RESET / BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  background-color: #050509;
+  color: #fff;
+  padding-top: 80px; /* height of the navbar */
+}
+
+a {
+  text-decoration: none;
+}
+
+/* CONTAINER */
+.cont {
+  margin: 0 auto;
+  max-width: 1130px;
+  padding: 0 16px;
+}
+
+/* TOPBAR / NAVBAR */
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.508); /* semi-transparent */
+  backdrop-filter: blur(6px);     /* optional: glass effect */
+}
+
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+}
+
+.nav-links li a {
+  color: white;
+  padding: 8px 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #e2b800;
+}
+
+/* HERO / BANNER */
+.banner {
+  position: relative;
+  background: url("../image/god of war1.jpg") center/cover no-repeat;
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.section {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  padding: 80px 16px 60px;
+}
+
+.section .cont1 {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section .cont1 h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.section .cont1 p {
+  font-size: 18px;
+  color: #f0f0f0;
+}
+
+/* POPULAR GAMES */
+.populergames {
+  background: url("../image/venom.jpg") center/cover no-repeat;
+  position: relative;
+  padding: 60px 0 80px;
+  text-align: center;
+}
+
+.populergames::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.populergames .cont {
+  position: relative;
+  z-index: 1;
+}
+
+.populergames h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.populergames p {
+  font-size: 18px;
+  max-width: 70%;
+  margin: 0 auto 30px;
+}
+
+.cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.populergames .card {
+  flex: 1 1 280px;
+  max-width: 340px;
+}
+
+.populergames .box {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.populergames img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.populergames .box h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.populergames .box p {
+  font-size: 15px;
+  color: #eee;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* DARK WIDOW */
+.thedarkwidow {
+  position: relative;
+  background: url("../image/insane asylum.jpg") center/cover no-repeat;
+  padding: 80px 0;
+}
+
+.thedarkwidow .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.darkwidow-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+.thedarkwidow .image-col,
+.thedarkwidow .text-col {
+  flex: 1 1 300px;
+}
+
+.thedarkwidow img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.thedarkwidow h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.thedarkwidow p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* METRO EXODUS */
+.metroexadous {
+  position: relative;
+  background: url("../image/metro1.jpg") center/cover no-repeat;
+  padding: 80px 0;
+}
+
+.metroexadous .overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.metro-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+.metroexadous .image-col,
+.metroexadous .text-col {
+  flex: 1 1 300px;
+}
+
+.metroexadous img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.5);
+}
+
+.metroexadous h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.metroexadous p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* WRAPPER / CARD SLIDER */
+.wrapper {
+  background: url("../image/gamingbg.jpg") center/cover no-repeat;
+  padding: 80px 0;
+}
+
+.wrapper .cont {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1130px;
+}
+
+.wrapper .card {
+  width: 80px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2rem;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+  box-shadow: 2px 4px 30px 5px rgba(248, 244, 244, 0.8);
+}
+
+.wrapper .row {
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.wrapper .card .icon {
+  background: #223;
+  color: white;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+  font-weight: 700;
+}
+
+.wrapper .card .description {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 60px;
+  width: 220px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.wrapper .description h1 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.wrapper input {
+  display: none;
+}
+
+.wrapper input:checked + label {
+  width: 320px;
+}
+
+.wrapper input:checked + label .description {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Slider card backgrounds */
+.wrapper .cont label[for="card1"] {
+  background-image: url("../image/ageofbharat.jpg");
+}
+.wrapper .cont label[for="card2"] {
+  background-image: url("../image/callofduty.jpg");
+}
+.wrapper .cont label[for="card3"] {
+  background-image: url("../image/velorent.jpg");
+}
+.wrapper .cont label[for="card4"] {
+  background-image: url("../image/needforspeed.jpg");
+}
+.wrapper .cont label[for="card5"] {
+  background-image: url("../image/metro exadous.jpg");
+}
+.wrapper .cont label[for="card6"] {
+  background-image: url("../image/poseideon.jpg");
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  background: #111;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.brand {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.credits {
+  margin: 10px 0;
+  color: #ccc;
+}
+
+.newsletter-text {
+  margin: 20px 0 10px;
+  color: #ddd;
+}
+
+.newsletter-box {
+  display: flex;
+  background: #333;
+  padding: 8px;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.newsletter-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.newsletter-box button {
+  background: #7745ff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .section .cont1 h1 {
+    font-size: 42px;
+  }
+
+  .cards-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapper .cont {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .wrapper input:checked + label {
+    width: 260px;
+  }
+
+  .darkwidow-inner,
+  .metro-inner {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    gap: 6px;
+  }
+
+  .nav-links li a {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .section {
+    padding-top: 120px;
+  }
+
+  .section .cont1 h1 {
+    font-size: 34px;
+  }
+
+  .section .cont1 p {
+    font-size: 16px;
+  }
+
+  .newsletter-box {
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 16px;
+  }
+
+  .newsletter-box button {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .wrapper input:checked + label {
+    width: 220px;
+  }
+}
